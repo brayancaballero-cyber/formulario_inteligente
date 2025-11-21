@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🛒 Registro de Productos</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <main class="main-container">
+    <section class="card">
+      <header class="card-header">
+        <h1><i class="fas fa-box-open"></i> Registro de Productos</h1>
+        <p>Ingresa los datos del nuevo producto</p>
+      </header>
+
+      <form id="formProducto">
+        <div class="form-group">
+          <label for="nombre"><i class="fas fa-tag"></i> Nombre del producto</label>
+          <input type="text" id="nombre" required placeholder="Ej: Laptop Dell Inspiron" />
+        </div>
+
+        <div class="form-group">
+          <label for="descripcion"><i class="fas fa-align-left"></i> Descripción</label>
+          <textarea 
+            id="descripcion" 
+            required 
+            placeholder="Breve descripción del producto..."
+            rows="3"
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="precio"><i class="fas fa-coins"></i> Precio (S/.)</label>
+          <input 
+            type="number" 
+            id="precio" 
+            step="0.01" 
+            min="0.01" 
+            required 
+            placeholder="Ej: 1299.90"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="imagen"><i class="fas fa-image"></i> Imagen (opcional)</label>
+          <input type="file" id="imagen" accept="image/*" />
+          <div id="preview" class="image-preview"></div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+          <i class="fas fa-save"></i> Guardar y Ver Reporte
+        </button>
+      </form>
+
+      <div class="footer-links">
+        <a href="reporte.html" class="btn btn-outline">
+          <i class="fas fa-list"></i> Ver Todos los Productos
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
